@@ -1,0 +1,22 @@
+{
+  "name": "api2ndshop",
+  "version": "1.0.0",
+  "description": "Shop mua bán trao đổi đồ cũ giữa các bạn sinh viên ở khu vực Biên Hòa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-u-Non/SecondHandShop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C-u-Non/SecondHandShop/issues"
+  },
+  "homepage": "https://github.com/C-u-Non/SecondHandShop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
