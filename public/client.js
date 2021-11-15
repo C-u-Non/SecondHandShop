@@ -11,7 +11,5 @@ $('form').submit(function(){
     var message = $('message').val();
     socket.emit('message',message);
     this.reset();
-
     return false;
-
 });
