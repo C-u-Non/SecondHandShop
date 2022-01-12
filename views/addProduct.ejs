@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shope Share</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/Roboto.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="/css/Bootstrap-Chat.css">
+    <link rel="stylesheet" href="/css/Community-ChatComments.css">
+    <link rel="stylesheet" href="/css/Drag-Drop-File-Input-Upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/Ludens-Users---3-Profile.css">
+    <link rel="stylesheet" href="/css/Simple-Bootstrap-Chat.css">
+    <link rel="stylesheet" href="/css/Simple-Slider.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/textarea.css">
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/">Chia sẻ đồ dùng</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="/about.html">Thông tin</a></li>
+                    <li class="nav-item dropdown" id="myDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Danh mục sản phẩm</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="#"> Danh mục 1 </a></li>
+                            <li> <a class="dropdown-item" href="#"> Danh mục 2 &raquo; </a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Danh mục con 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Danh mục con 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Danh mục con 3 &raquo; </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Sản phẩm 1</a></li>
+                                            <li><a class="dropdown-item" href="#">Sản phẩm 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Danh mục con 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Danh mục con 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#"> Danh mục 3 </a></li>
+                            <li><a class="dropdown-item" href="#"> Danh mục 4 </a></li>
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Giỏ hàng
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="itemInBadge">0</span>
+                    </button>
+                    <button class="btn btn-outline-dark" type="button" onclick="LoginHandler('','')">
+                        <i class="bi bi-person-circle"></i>
+                        Xin chào
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id='idUserName'>Bạn</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Section-->
+    <section class="py-5">
+        <form action="./addProduct" method="post" enctype="multipart/form-data">
+            <div class="container"
+                style="width: 900px;box-shadow: 5px 5px 20px var(--bs-blue);border-width: 2px;border-color: #48ccff;margin-top: 50px;">
+                <h1 class="text-center">Thêm sản phẩm</h1>
+                <div class="row"
+                    style="margin-top: 10px;margin-bottom: 10px;border-bottom-width: 1px;border-bottom-style: solid;">
+                    <div class="col-xxl-4 d-xxl-flex justify-content-xxl-start align-items-xxl-center">
+                        <h4>Tên sản phẩm</h4>
+                    </div>
+                    <div class="col" style="border-left-width: 1px;border-left-style: solid;">
+                        <input type="text" name="tensanpham"
+                            style="width: 560px;height: 40px;border-width: 0px;border-bottom-width: 2px;border-left-width: 0px;">
+                    </div>
+                </div>
+                <div class="row"
+                    style="margin-top: 10px;margin-bottom: 10px;border-bottom-width: 1px;border-bottom-style: solid;">
+                    <div class="col-xxl-4 d-xxl-flex justify-content-xxl-start align-items-xxl-center">
+                        <h4>Giá bán</h4>
+                    </div>
+                    <div class="col d-lg-flex d-xxl-flex align-items-lg-center align-items-xxl-center"
+                        style="border-left-width: 1px;border-left-style: solid;">
+                        <input type="number" name="giaban"
+                            style="width: 300px;height: 40px;border-width: 0px;border-bottom-width: 2px;color: var(--bs-red);font-weight: bold;">
+                        <div class="dropdown d-xxl-flex" style="width: 195px;">
+                            <button class="btn dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown"
+                                type="button" style="margin-bottom: 0px;margin-left: 0px;margin-right: 0px;"
+                                name='donvi'>Đơn vị</button>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">VNĐ</a><a class="dropdown-item"
+                                    href="#">USD</a><a class="dropdown-item" href="#">Lá mít</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"
+                    style="margin-top: 10px;margin-bottom: 10px;border-bottom-width: 1px;border-bottom-style: solid;">
+                    <div class="col-xxl-4 d-xxl-flex justify-content-xxl-start align-items-xxl-center">
+                        <h4>Số lượng</h4>
+                    </div>
+                    <div class="col" style="border-left-width: 1px;border-left-style: solid;">
+                        <input type="number" name="soluong"
+                            style="width: 300px;height: 40px;border-width: 0px;border-bottom-width: 2px;">
+                    </div>
+                </div>
+                <div class="row"
+                    style="margin-top: 10px;margin-bottom: 10px;border-bottom-width: 1px;border-bottom-style: solid;">
+                    <div class="col-xxl-4 d-xxl-flex justify-content-xxl-start align-items-xxl-center">
+                        <h4>Hình ảnh</h4>
+                    </div>
+                    <div class="col" style="border-left-width: 1px;border-left-style: solid;">
+                        <input type="file" name="anh" style="height: 40px;">
+                    </div>
+                </div>
+                <div class="row"
+                    style="margin-top: 10px;margin-bottom: 10px;border-bottom-width: 1px;border-bottom-style: solid;">
+                    <div class="col-xxl-4 d-xxl-flex justify-content-xxl-start align-items-xxl-center">
+                        <h4>Hình thức trao đổi</h4>
+                    </div>
+                    <div class="col" style="border-left-width: 1px;border-left-style: solid;">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label
+                                class="form-check-label" for="formCheck-1">Trược tiếp</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label
+                                class="form-check-label" for="formCheck-2">Ship COD</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label
+                                class="form-check-label" for="formCheck-3">Ship không COD</label></div>
+                    </div>
+                </div>
+                <input type="text" style="display:none" name="user" id='u'>
+                <div class="row"
+                    style="margin-top: 10px;margin-bottom: 10px;border-bottom-width: 1px;border-bottom-style: solid;">
+                    <div class="col">
+                        <div class="field">
+                            <textarea class="form-control" name="motasanpham" type="text"
+                                style="border: 0;border-bottom: 1px solid #E0E0E0;height: 300px;"
+                                placeholder=" "></textarea><label class="form-label mb-0" for="float-textarea">Mô tả
+                                sản
+                                phẩm</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+            </div>
+
+        </form>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; YC 2021</p>
+        </div>
+    </footer>
+    <script>
+        window.onload = function () {
+            let user = getCookie('user');
+            let token = getCookie('token');
+            if (token != '') {
+                document.getElementById('u').innerHTML = user;
+            } else {
+                alert('Đăng nhập để xem được nhiều thông tin hơn!')
+            }
+        }
+    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/js/scripts.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/bs-init.js"></script>
+</body>
+
+</html>

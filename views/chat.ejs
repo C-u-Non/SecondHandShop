@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="jq.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:3000');
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                var data = $('#textBox').val();
+                socket.emit('sendMsg', data);
+            });
+
+            $('#idchat').click(function () {
+                var n = $('#idchat').attr('name');
+                socket.emit('sendID',n);
+            });
+        });
+        function SendChatId() {
+        }
+    </script>
+</head>
+
+<body>
+    <div id="idchat" name="1234">1234</div>
+    <input type="text" id='textBox'>
+    <button id="btn">Send</button>
+</body>
+
+</html>
