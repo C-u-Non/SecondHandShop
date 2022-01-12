@@ -1,2 +1,2 @@
-# SecondHandShop
-Shop mua bán trao đổi đồ cũ giữa các bạn sinh viên ở khu vực Biên Hòa
+# Chat Realtime Socket Cuu Non Second hands shop
+Realtime chat using NodeJS and Express
